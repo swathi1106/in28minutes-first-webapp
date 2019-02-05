@@ -1,9 +1,10 @@
 <html>
 <head>
-<title>Yahoo!!</title>
+<title>Todos for ${name}</title>
 </head>
 <body>
-Your todos are
-${todos}
+<H1>Your Todos</H1>
+ ${todos}
+ <a class="button" href="/add-todo">Add</a>
 </body>
 </html>
