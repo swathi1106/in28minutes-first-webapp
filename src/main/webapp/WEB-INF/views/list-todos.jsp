@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<<<<<<< HEAD
 
 <html>
 <head>
@@ -30,5 +31,15 @@ Hi ${name} <br/>
 </table>
 
 <a class="button" href="/add-todo">Add</a>
+=======
+<html>
+<head>
+<title>Todos for ${name}</title>
+</head>
+<body>
+<H1>Your Todos</H1>
+ ${todos}
+ <a class="button" href="/add-todo">Add</a>
+>>>>>>> branch 'master' of https://github.com/swathi1106/in28minutes-first-webapp.git
 </body>
 </html>
