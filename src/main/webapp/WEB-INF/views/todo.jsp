@@ -1,11 +1,6 @@
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<html>
-<head>
-<title>Yahoo!!</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	    		rel="stylesheet">
-</head>
-<body>
+<%@include file="common/header.jspf" %>
+<%@include file="common/navigation.jspf"%>
+
 <div class="container">
 <h1>Add a Todo</h1>
 <form:form method="post" commandName="todo">
@@ -32,3 +27,5 @@
 	    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<%@include file="common/footer.jspf" %>

@@ -18,19 +18,11 @@ public class LoginController {
 	LoginService service;
 //	@ResponseBody(if we want to print something or send response back to browser)
 	@RequestMapping(value = "/login", method = RequestMethod.GET )
-	public String showLoginPage() {
+	public String showLoginPage(ModelMap model) {
 //		return "Hello World Welcome";
-		return "login";
+		model.put("name", "Swathi");
+		return "welcome";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST )
-	public String handleLoginRequest(@RequestParam String name,@RequestParam String password,ModelMap model) {
-		if(!service.validateUser(name, password)) {
-			model.put("errorMessage", "Invalid Credentials!!");
-			return "login";
-		}
-			model.put("name", name);
-			model.put("password", password);
-			return "welcome";
-		}
+	
 }
