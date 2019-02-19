@@ -11,13 +11,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.in28minutes.login.LoginService;
 
 @Controller 
-@SessionAttributes("name")
-public class LoginController {
-	
-	@Autowired
-	LoginService service;
+public class WelcomeController {
+
 //	@ResponseBody(if we want to print something or send response back to browser)
-	@RequestMapping(value = "/login", method = RequestMethod.GET )
+	@RequestMapping(value = "/", method = RequestMethod.GET )
 	public String showLoginPage(ModelMap model) {
 //		return "Hello World Welcome";
 		model.put("name", "Swathi");
