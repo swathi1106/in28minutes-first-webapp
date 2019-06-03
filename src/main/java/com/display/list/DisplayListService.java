@@ -1,7 +1,9 @@
 package com.display.list;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
@@ -38,12 +40,53 @@ public class DisplayListService {
 		return model;
 	}
 	
+	public Map<String, String> getDisplayMap() {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("", "--SELECT--");
+		map.put("one", "ASSOC CAPE GIRARDEAU (JACKSON)");
+		map.put("two", "ASSOCIATE DIV BOLLINGER");
+		map.put("three", "DO NOT USE");
+		map.put("four", "ASSOCIATE DIV PERRY");
+		map.put("five", "DO NOT USE");
+		map.put("six", "DO NOT USE");
+		map.put("seven", "JUVENILE OFFICE CAPE GIRARDEAU");
+		map.put("eight", "DO NOT USE");
+		map.put("nine", "PERRY");
+		map.put("ten", "DO NOT USE");
+		map.put("eleven", "CAPE GIRARDEAU (CAPE GIRARD)");
+		return map;
+	}
+	
 	public DisplayListModel getDisplayList(String value) {
-		if(value.equals("project")) {
+		if(value.equals("DO NOT USE")) {
 			return getDisplayProject();
-		} else if (value.equals("todos")) {
+		} else if (value.equals("DO NOT USE")) {
 			return getDisplayTodos();
-		} else if(value.equals("party")) {
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("ASSOC CAPE GIRARDEAU (JACKSON)")) {
+			return getDisplayParty();
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("ASSOCIATE DIV BOLLINGER")) {
+			return getDisplayParty();
+		} else if(value.equals("ASSOCIATE DIV PERRY")) {
+			return getDisplayParty();
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("CAPE GIRARDEAU (CAPE GIRARD)")) {
+			return getDisplayParty();
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("JUVENILE OFFICE CAPE GIRARDEAU")) {
+			return getDisplayParty();
+		} else if(value.equals("JUVENILE OFFICE PERRY")) {
+			return getDisplayParty();
+		} else if(value.equals("DO NOT USE")) {
+			return getDisplayParty();
+		} else if(value.equals("PERRY")) {
 			return getDisplayParty();
 		}
 		return null;
